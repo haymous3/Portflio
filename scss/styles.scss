@@ -62,16 +62,43 @@ $white_color: #fff;
     &_header{
         display: flex;
         justify-content: space-between;
+        align-items: center;
         position: relative;
         color: $white_color;
         z-index: 3;
+        @include sections_padding;
+        padding-top: 2rem;
 
 
 
         &_navigation{
+            display: flex;
+           width: 12.5rem;
+            justify-content: space-between;
+            align-items: center;
 
 
-            
+            &_number{
+                display: flex;
+                // width: 10.5;
+                
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            &_bars{
+                width: fit-content;
+                &_one, &_two, &_three{
+                    width: 2rem;
+                    display: block;
+                    height: 0.15rem;
+                    margin-top:0.3rem;
+                    background: $white_color;
+                  
+                   
+
+                }
+            }
         }
 
     }

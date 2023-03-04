@@ -31,9 +31,35 @@
 .header_and_hero_section_header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: relative;
   color: #fff;
   z-index: 3;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 2rem;
+}
+.header_and_hero_section_header_navigation {
+  display: flex;
+  width: 12.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.header_and_hero_section_header_navigation_number {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header_and_hero_section_header_navigation_bars {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.header_and_hero_section_header_navigation_bars_one, .header_and_hero_section_header_navigation_bars_two, .header_and_hero_section_header_navigation_bars_three {
+  width: 2rem;
+  display: block;
+  height: 0.15rem;
+  margin-top: 0.3rem;
+  background: #fff;
 }
 .header_and_hero_section_hero_text {
   display: flex;
