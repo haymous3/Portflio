@@ -1,0 +1,120 @@
+$primary_color: #f5df4e;
+$secondary_color: #212529;
+$font: 'Poppins', sans-serif;
+$layer_bg: #111418;
+$white_color: #fff;
+
+
+@mixin sections_padding{
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+@mixin buttons{
+    border-width: 2px;
+    font-weight: 500;
+    padding: 0.8rem 2.6rem;
+    transition: all .5s ease;
+}
+
+@mixin btn_primary{
+    background-color: $primary_color;
+    border-color: $primary_color;
+    color: $secondary_color;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font;
+
+
+    a{
+        text-decoration: none;
+    }
+}
+
+
+
+
+.header_and_hero_section{
+    height: 100vh;
+    position: relative;
+    background-image: url(../images/amos_two.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    object-position: center;
+    background-position: center;
+
+
+    &_layout{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: $layer_bg;
+        opacity: 0.7;
+        z-index: 1;
+    }
+
+    &_header{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        color: $white_color;
+        z-index: 3;
+
+
+
+        &_navigation{
+
+
+            
+        }
+
+    }
+
+    &_hero{
+
+        &_text{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            width: 28%;
+            z-index: 3;
+            position: relative;
+            height: 100vh;
+            padding: 12rem 0rem;
+            margin: 0 auto;
+    
+            h2, h3, h4{
+                color: $white_color;
+            }
+
+            h2{
+                font-size: 5.5rem;
+            }
+
+            h3{
+                font-size: 1.8rem;
+            }
+
+            h4{
+                font-size: 1.3rem;
+                text-align: center;
+                width: 80%;
+            }
+
+            button{
+                @include buttons;
+                @include btn_primary;
+                font-weight: bolder;
+            }
+        }
+    }
+}
+
+   
