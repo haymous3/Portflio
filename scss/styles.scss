@@ -112,6 +112,7 @@ $progress_bg: #E9ECEF;
 .header_and_hero_section{
     height: 100vh;
     position: relative;
+    
     background-image: url(../images/amos_two.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -156,6 +157,7 @@ $progress_bg: #E9ECEF;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
         position: relative;
         color: $white_color;
         z-index: 3;
@@ -243,7 +245,7 @@ $progress_bg: #E9ECEF;
             }
         }
     }
-}
+} 
 
 
 .section_two{
@@ -336,6 +338,7 @@ $progress_bg: #E9ECEF;
 
     &_details{
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         padding-right: 8rem;
 
@@ -692,4 +695,491 @@ $progress_bg: #E9ECEF;
     }
 }
 
+.section_seven{
+    @include sections_padding;
+    background-color: #939597!important;
+
+    &_title{
+        @include title;
+        
+
+        p{
+            @include title_p;
+        }
+
+        h2{
+            @include title_h2;
+            color: $white_color;
+        }
+    }
+
+    &_content{
+        display: flex;
+        overflow: hidden;
+        color: $white_color;
+
+        &_one{
+            text-align: center;
+            margin-top: 2rem;
+            width: 60%;
+            margin: 1.5rem auto;
+        }
+
+        &_two, &_three{
+            display: none;
+            text-align: center;
+            margin-top: 2rem;
+            width: 60%;
+            margin: 1.5rem auto;
+        }
+    }
+
+    
+}
+
+.section_eight{
+    background-color: $primary_color;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include sections_padding;
+
+
+    &_one{
+        width: 40%;
+
+
+        h2{
+            font-size: 2.5rem;
+            padding-bottom: 2rem;
+        }
+
+        p{
+            line-height:  2rem;
+            font-weight: bold;
+        }
+
+        >:nth-child(3), >:nth-child(4), >:nth-child(5){
+            margin: 2rem 0;
+            line-height: 2rem;
+        }
+        >:nth-child(5){
+            font-size: 2rem;
+        }
+    }
+
+    &_two{
+        width: 50%;
+
+
+        h2{
+            font-size: 2.5rem;
+            padding-bottom: 2rem;
+        }
+
+
+        input{
+            background-color: transparent;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            width: 100%;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+            outline: none;
+        }
+
+        label{
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        textarea{
+            background-color: transparent;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            width: 100%;
+            outline: none;
+    }
+}
+}
+
+
+.section_nine{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    @include sections_padding;
+    background-color: #111418;
+    font-weight: 700;
+
+    color: $white_color;
+}
+
+
+
+// Media Queries
+
+
+@media only screen and (max-width:767px) {
+    
+    @mixin sections_padding{
+        padding: 4rem 2rem;
+       }
+       
+       @mixin buttons{
+           border-width: 2px;
+           font-weight: 500;
+           padding: 0.8rem 2.6rem;
+           transition: all .5s ease;
+       }
+       
+       @mixin btn_primary{
+           background-color: $primary_color;
+           border-color: $primary_color;
+           color: $secondary_color;
+       }
+       
+       
+       @mixin title{
+           text-align: center;
+           margin-top: 2rem;
+           line-height: 2.5rem;
+       }
+       
+       
+       @mixin title_p{
+               width: 50%;
+               margin: 0 auto;
+               background: $primary_color;
+               font-weight: 700;
+       }
+       
+       @mixin title_h2{
+           padding: 1.5rem 0;
+           font-size: 2rem;
+       }
+
+       .header_and_hero_section{
+           
+        &_header{
+            
+            flex-wrap: wrap-reverse;
+            padding-top: 2rem !important;
+            @include sections_padding;
+            
+            &_navigation{
+               
+                &_bars{
+               
+                    top: 3.8rem;
+                        
+                }
+    
+            }
+    
+        }
+    
+        &_hero{
+    
+            &_text{
+              
+                width: 100%;           
+                padding: 0rem 0rem;
+                
+                h2{
+              
+                    margin-top: -9rem;
+                }
+    
+              
+                h4{
+                    
+                    margin-top: -13rem;
+                }
+    
+                button{
+                   margin-top: -21rem;
+                }
+            }
+        }
+    }
+
+    .section_two{
+        @include sections_padding;
+       
+    
+    
+        &_title{  
+            @include title;
+    
+    
+            p{
+                
+              @include title_p;
+    
+            }
+    
+            h2{
+               @include title_h2;
+            }
+        }
+    
+    
+        &_content{
+            
+            &_one{
+                width: 100%;
+                text-align: center;
+    
+    
+                p{
+                    font-size: 1rem;
+                    line-height: 2rem;
+                  
+                }
+            }
+    
+            &_two{
+            
+                width: 100%;
+                margin-top: 4rem;
+               
+
+    
+                >:first-child{
+        
+    
+                    h2{
+                        font-size: 3rem;
+                    }
+                }
+    
+                >:last-child{
+                    margin-top: 2rem;
+                    font-size: 2rem;
+                    font-weight: 700;
+    
+                    p{
+                        span{
+                            color: $text_color;
+                        }
+                    }
+    
+                    
+                }
+            }
+        }
+    
+        &_details{
+          
+            padding-right: 0rem;
+    
+            div{
+             width: 100%;
+                text-align: center;
+    
+              
+            }
+        }
+    }
+
+    .section_three{
+        @include sections_padding;
+      
+
+        &_title{
+            @include title;
+    
+    
+            p{
+                @include title_p;
+            }
+    
+            h2{
+                @include title_h2;
+            }
+        }
+    
+    
+        &_content{
+        
+    
+            &_one, &_two, &_three, &_four, &_five, &_six{
+                width: 100%;
+                
+            }
+        }
+    }
+    .section_four{
+        @include sections_padding;
+    
+    
+        &_title{
+            @include title;
+    
+    
+            p{
+                @include title_p;
+            }
+    
+            h2{
+                @include title_h2;
+            }
+        }
+    
+    
+        &_content{
+        
+    
+    
+            &_one, &_two{
+                width: 100%;
+                
+               
+    
+               
+            }
+
+            &_two{
+                margin-top: 3rem;
+            }
+        }
+    
+    
+        &_skills{
+            margin-top: 5rem;
+         
+    
+            &_content{
+              
+                &_one, &_two{
+                    width: 100%;
+                    padding: 1rem 1rem;
+    
+                   
+                }
+    
+            }
+        }
+    }
+    .section_five{
+       
+        @include sections_padding;
+    
+    
+        &_title{
+            @include title;
+    
+           p{
+            @include title_p;
+           }
+    
+           h2{
+            @include title_h2;
+           }
+        }
+    
+    
+        &_content{
+            &_one, &_two, &_three{
+                width: 100%;
+                margin-top: 1rem;
+    
+            }
+        }
+    }
+    .section_six{
+
+    
+        >:last-child{
+      
+            h2{
+                
+                font-size: 1.8rem;
+               
+                padding: 1rem 2rem;
+                
+            }
+    
+            button{
+                width: 50%;
+            }
+        }
+    }
+    .section_seven{
+        @include sections_padding;
+      
+        &_title{
+            @include title;
+            
+            p{
+                @include title_p;
+            }
+    
+            h2{
+                @include title_h2;
+                color: $white_color;
+            }
+        }
+    
+        &_content{
+        
+            &_one{
+               
+                width: 100%;
+                
+            }
+    
+            &_two, &_three{
+                
+                width: 100%;
+               
+            }
+        }
+    
+        
+    }
+    .section_eight{
+        
+        @include sections_padding;
+    
+    
+        &_one{
+            width: 100%;
+            text-align: center;
+    
+        }
+    
+        &_two{
+            width: 100%;
+            text-align: center;
+    
+    
+            h2{
+                font-size: 2.5rem;
+                padding-bottom: 2rem;
+            }
+    
+
+
+            div{
+                text-align: left;
+            }
+    
+           
+        }
+    }
+    .section_nine{
+       
+        @include sections_padding;
+        text-align: center;
+        line-height: 2rem;
+    
+        
+    }
+       
+}
    
