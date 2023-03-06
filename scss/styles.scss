@@ -226,8 +226,47 @@ $progress_bg: #E9ECEF;
 
             h2{
                 font-size: 5.5rem;
+                position: relative;
+                overflow: hidden;
+                animation: hey 4s steps(12) infinite;
+                
+                
             }
 
+            @keyframes hey {
+                40%, 60%{
+                    margin-left: 100%;
+                }
+
+                40%, 60%{
+                    margin-left: 100%;
+                }
+            }
+
+            h2::before{
+                position: absolute;
+                border-left: 2px solid $white_color;
+                content: '';
+                position: absolute;
+                border-left: 2px solid $white_color;
+                background:transparent;
+                opacity: 1;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                
+                animation: animate 4s steps(12) infinite ;
+            }
+
+            @keyframes animate {
+                40%, 60%{
+                    right: 100%;
+                }
+                40%, 60%{
+                    right: 100%;
+                }
+                
+            }
             h3{
                 font-size: 1.8rem;
             }
